@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/example/apppolarmaquinas/LoginScreen.kt">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/app/src/main/java/com/example/apppolarmaquinas/LoginScreen.kt" />
+              <option name="updatedContent" value="package com.example.apppolarmaquinas&#10;&#10;import androidx.compose.foundation.layout.Box&#10;import androidx.compose.foundation.layout.fillMaxSize&#10;import androidx.compose.material3.Button&#10;import androidx.compose.material3.Text&#10;import androidx.compose.runtime.Composable&#10;import androidx.compose.ui.Alignment&#10;import androidx.compose.ui.Modifier&#10;import androidx.compose.ui.tooling.preview.Preview&#10;&#10;@Composable&#10;fun LoginScreen(onBack: () -&gt; Unit = {}) {&#10;    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {&#10;        Button(onClick = onBack) {&#10;            Text(text = &quot;Tela de Login - Voltar&quot;)&#10;        }&#10;    }&#10;}&#10;&#10;@Preview(showBackground = true)&#10;@Composable&#10;fun LoginScreenPreview() {&#10;    LoginScreen()&#10;}&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/example/apppolarmaquinas/SignupScreen.kt">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/app/src/main/java/com/example/apppolarmaquinas/SignupScreen.kt" />
+              <option name="updatedContent" value="package com.example.apppolarmaquinas&#10;&#10;import androidx.compose.foundation.layout.Box&#10;import androidx.compose.foundation.layout.fillMaxSize&#10;import androidx.compose.material3.Button&#10;import androidx.compose.material3.Text&#10;import androidx.compose.runtime.Composable&#10;import androidx.compose.ui.Alignment&#10;import androidx.compose.ui.Modifier&#10;import androidx.compose.ui.tooling.preview.Preview&#10;&#10;@Composable&#10;fun SignupScreen(onBack: () -&gt; Unit = {}) {&#10;    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {&#10;        Button(onClick = onBack) {&#10;            Text(text = &quot;Tela de Cadastro - Voltar&quot;)&#10;        }&#10;    }&#10;}&#10;&#10;@Preview(showBackground = true)&#10;@Composable&#10;fun SignupScreenPreview() {&#10;    SignupScreen()&#10;}&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
