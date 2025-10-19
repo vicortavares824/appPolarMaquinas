@@ -49,12 +49,11 @@ fun LoginScreen(onBack: () -> Unit = {}) {
         contentAlignment = Alignment.TopStart
     ) {
         FancyButton(
-        text = "Voltar",
-        icon = Icons.Default.ArrowBackIosNew,
-        gradientColors = listOf(Color(0xFF03A9F4), Color(0x99FF0004))
-    ) {
-        // ação do botão
-    }
+            text = "Voltar",
+            icon = Icons.Default.ArrowBackIosNew,onClick = onBack,
+            gradientColors = listOf(Color(0xFF03A9F4), Color(0x99FF0004))
+
+        )
     }
 }
 
