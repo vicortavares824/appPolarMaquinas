@@ -3,8 +3,15 @@ package com.example.apppolarmaquinas.ui.theme
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
+import com.example.apppolarmaquinas.R
+
+// Define a família de fontes personalizada usando o recurso em res/font
+val AdlamFontFamily = FontFamily(
+    Font(R.font.adlamdisplay_regular)
+)
 
 // Set of Material typography styles to start with
 val Typography = Typography(
