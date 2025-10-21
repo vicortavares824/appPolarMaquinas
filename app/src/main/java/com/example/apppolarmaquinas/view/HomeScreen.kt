@@ -27,7 +27,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.material3.TextFieldDefaults
-
+import com.example.apppolarmaquinas.view.component.CustomTextField
 
 
 @Preview(name= "ordem e serviço",showBackground = true)
@@ -39,21 +39,21 @@ fun HomeScreens() {
 
     Scaffold(
         bottomBar = {
-            Box(
+            Surface(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(100.dp)
-                    .padding(horizontal = 16.dp, vertical = 8.dp)
-
-                    .background(Color.Red),
-                contentAlignment = Alignment.Center
+                    .height(100.dp),
+                color = Color.Red,
+                shape = RoundedCornerShape(topStart = 40.dp, topEnd = 40.dp),
+                tonalElevation = 0.dp
             ) {
                 NavigationBar(
-                    containerColor = Color.Transparent, // 🔹 deixa transparente
+                    modifier = Modifier.fillMaxSize(),
+                    containerColor = Color.Transparent,
                     tonalElevation = 0.dp
                 ) {
                     NavigationBarItem(
-                        selected = true,
+                        selected = false,
                         onClick = { },
                         icon = { Icon(Icons.Outlined.Home, contentDescription = "Home", tint = Color.White) },
                         label = { Text("Ordem Serviços", color = Color.White, fontSize = 8.sp) }
@@ -111,16 +111,16 @@ fun HomeScreens() {
                 ) {
                 Box(modifier = Modifier.fillMaxSize() .background(brush = gradient)){
                     Column(Modifier.padding(16.dp)) {
-                        CustomTextField("Nome Cliente")
-                        CustomTextField("Telefone")
-                        CustomTextField("Email")
+                        CustomTextField("Nome Cliente",int = 10)
+                        CustomTextField("Telefone",int = 10)
+                        CustomTextField("Email",int = 10)
                         Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                            Box(Modifier.weight(2f)) { CustomTextField("Rua") }
-                            Box(Modifier.weight(1f)) { CustomTextField("Nº") }
+                            Box(Modifier.weight(2f)) { CustomTextField("Rua",int = 10) }
+                            Box(Modifier.weight(1f)) { CustomTextField("Nº",int = 5) }
                         }
-                        CustomTextField("Cidade")
-                        CustomTextField("Tipo de serviço")
-                        CustomTextField("Descrição")
+                        CustomTextField("Cidade",int = 10)
+                        CustomTextField("Tipo de serviço",int = 10)
+                        CustomTextField("Descrição",int = 10)
 
                         Row(
                             Modifier
@@ -136,7 +136,7 @@ fun HomeScreens() {
                             }
                         }
 
-                        CustomTextField("Assinatura")
+                        CustomTextField("Assinatura",int = 10)
                     }
                 }
             }
@@ -144,24 +144,3 @@ fun HomeScreens() {
     }
 }
 
-@Composable
-fun CustomTextField(label: String) {
-    var text by remember { mutableStateOf("") }
-    OutlinedTextField(
-        value = text,
-        onValueChange = { text = it },
-        label = { Text(label) },
-        singleLine = true,
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(vertical = 4.dp),
-
-
-        colors = TextFieldDefaults.colors(
-            focusedContainerColor = Color.White,
-            unfocusedContainerColor = Color.White,
-            focusedIndicatorColor = Color.Gray,
-            unfocusedIndicatorColor = Color.LightGray
-        )
-    )
-}
