@@ -89,7 +89,7 @@ fun AppNavGraph() {
                 )
             }
             composable("login") {
-                LoginScreen(onBack = { navController.popBackStack() },onClick= {navController.navigate("home")})
+                LoginScreen(onBack = { navController.popBackStack() },onHomeClick= {navController.navigate("home")})
             }
             composable("signup") {
                 SignupScreen(onBack = { navController.popBackStack() })

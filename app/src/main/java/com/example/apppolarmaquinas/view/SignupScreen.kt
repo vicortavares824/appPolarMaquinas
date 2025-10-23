@@ -17,6 +17,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.ArrowBackIosNew
+import androidx.compose.material.icons.filled.BorderColor
 import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
@@ -85,9 +86,11 @@ fun SignupScreen(onBack: () -> Unit = {}) {
 
                 Text("Ordem de serviço", fontSize = 30.sp, color = Color.Black, fontFamily = AdlamFontFamily)
                 Text("Faça seu Cadastro", fontSize = 30.sp, color = Color.Black,fontFamily = AdlamFontFamily)
+                CustomTextField("Nome", int = 40, trailingIcon = Icons.Default.BorderColor)
                 CustomTextField("Email", int = 40, trailingIcon = Icons.Default.AccountCircle)
-                CustomTextField("*******",int =40,trailingIcon = Icons.Default.Lock)
-                compButtom(text = "Login", onClick = {},int = 40, circulo = 10)
+                CustomTextField("Senha",int =40,trailingIcon = Icons.Default.Lock)
+                CustomTextField("Senha Confirma",int =40,trailingIcon = Icons.Default.Lock)
+                compButtom(text = "Cadastrar", onClick = {},int = 40, circulo = 10)
 
 
             }

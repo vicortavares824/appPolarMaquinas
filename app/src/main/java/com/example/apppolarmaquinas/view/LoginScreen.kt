@@ -48,9 +48,9 @@ import kotlin.Int
 import com.example.apppolarmaquinas.ui.theme.AdlamFontFamily
 import com.example.apppolarmaquinas.view.component.CustomTextField
 
-@Preview
+
 @Composable
-fun LoginScreen(onBack: () -> Unit = {},onClick: () -> Unit) {
+fun LoginScreen(onBack: () -> Unit = {},onHomeClick: () -> Unit) {
 
     Box(
         modifier = Modifier
@@ -101,7 +101,7 @@ fun LoginScreen(onBack: () -> Unit = {},onClick: () -> Unit) {
                 Text("Faça seu Login", fontSize = 30.sp, color = Color.Black,fontFamily = AdlamFontFamily)
                 CustomTextField("Email",int =40,trailingIcon = Icons.Default.AccountCircle )
                 CustomTextField("*******",int =40,trailingIcon = Icons.Default.Lock)
-                compButtom(text = "Login", onClick = {onClick},int = 40, circulo = 10)
+                compButtom(text = "Login", onClick = onHomeClick,int = 40, circulo = 10)
 
 
             }
