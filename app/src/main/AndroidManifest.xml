@@ -3,12 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
-
+        android:label="@string/empty_label"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/polar_maquinas"
-        android:label="@string/app_name"
         android:roundIcon="@mipmap/polar_maquinas"
         android:supportsRtl="true"
         android:theme="@style/Theme.PolarMaquinas"
@@ -16,7 +15,8 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.PolarMaquinas.Splash">
+            android:theme="@style/Theme.PolarMaquinas"
+            android:label="@string/empty_label">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -57,10 +57,11 @@ fun SignupScreen(onBack: () -> Unit = {}) {
 
         contentAlignment = Alignment.TopStart
     ) {
+
         FancyButton(
             text = "Voltar",
             icon = Icons.Default.ArrowBackIosNew,onClick = onBack,
-            gradientColors = listOf(Color(0xFF03A9F4), Color(0x99FF0004))
+            btncolor = Color(0x99FF0004)
 
         )
         Column(
@@ -82,7 +83,7 @@ fun SignupScreen(onBack: () -> Unit = {}) {
                 )
 
 
-                Spacer(modifier = Modifier.height(50.dp))
+                Spacer(modifier = Modifier.height(30.dp))
 
                 Text("Ordem de serviço", fontSize = 30.sp, color = Color.Black, fontFamily = AdlamFontFamily)
                 Text("Faça seu Cadastro", fontSize = 30.sp, color = Color.Black,fontFamily = AdlamFontFamily)

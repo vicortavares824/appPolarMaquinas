@@ -73,7 +73,7 @@ fun LoginScreen(onBack: () -> Unit = {},onHomeClick: () -> Unit) {
         FancyButton(
             text = "Voltar",
             icon = Icons.Default.ArrowBackIosNew,onClick = onBack,
-            gradientColors = listOf(Color(0xFF03A9F4), Color(0x99FF0004))
+            btncolor =  Color(0x99FF0004)
 
         )
         Column(

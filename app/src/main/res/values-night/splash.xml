@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="Theme.PolarMaquinas.Splash" parent="Theme.SplashScreen">
-        <item name="windowSplashScreenBackground">@color/black</item>
+        <item name="windowSplashScreenBackground">@android:color/transparent</item>
         <item name="postSplashScreenTheme">@style/Theme.PolarMaquinas</item>
         <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher_round</item>
     </style>

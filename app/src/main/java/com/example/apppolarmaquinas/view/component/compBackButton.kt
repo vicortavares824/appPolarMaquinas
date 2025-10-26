@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -19,7 +20,6 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
@@ -30,22 +30,25 @@ import androidx.compose.ui.unit.sp
 fun FancyButton(
     text: String,
     icon: ImageVector,
-    gradientColors: List<Color>,
+    btncolor: Color,
     onClick: () -> Unit
 ) {
+
     Button(
         onClick = onClick,
         colors = ButtonDefaults.buttonColors(containerColor = Color.Transparent),
         contentPadding = PaddingValues(),
         shape = RoundedCornerShape(50.dp),
         modifier = Modifier
-            .fillMaxWidth(0.3f)
-            .height(56.dp)
+            .fillMaxWidth(0.2f)
+            .height(46.dp)
+            .padding(vertical = 5.dp)
+
     ) {
         Box(
             modifier = Modifier
                 .background(
-                    brush = Brush.horizontalGradient(colors = gradientColors),
+                    color = btncolor,
                     shape = RoundedCornerShape(50.dp)
                 )
                 .fillMaxSize(),
@@ -61,13 +64,13 @@ fun FancyButton(
                     tint = Color.White,
                     modifier = Modifier.size(20.dp)
                 )
+
                 Text(
                     text = text,
                     color = Color.White,
-                    fontSize = 18.sp,
+                    fontSize = 14.sp,
                     fontWeight = FontWeight.Bold
                 )
-                Spacer(modifier = Modifier.width(8.dp))
 
             }
         }
